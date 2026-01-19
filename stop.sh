@@ -23,5 +23,5 @@ echo ""
 $COMPOSE_CMD down
 
 echo ""
-echo "✅ All services stopped"
+echo " All services stopped"
 echo ""
