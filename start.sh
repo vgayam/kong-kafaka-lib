@@ -39,7 +39,7 @@ else
 fi
 
 if [ -z "$COMPOSE_CMD" ]; then
-    echo "❌ Compose command not found!"
+    echo " Compose command not found!"
     exit 1
 fi
 
@@ -59,7 +59,7 @@ until $CONTAINER_RUNTIME exec kafka kafka-broker-api-versions --bootstrap-server
     echo "   Waiting for Kafka..."
     sleep 5
 done
-echo "✅ Kafka is ready"
+echo " Kafka is ready"
 
 # Check if Schema Registry is ready
 echo "🔍 Checking Schema Registry..."
@@ -67,13 +67,13 @@ until curl -s http://localhost:8081/subjects > /dev/null; do
     echo "   Waiting for Schema Registry..."
     sleep 5
 done
-echo "✅ Schema Registry is ready"
+echo "Schema Registry is ready"
 
 echo ""
-echo "🎉 All services are ready!"
+echo "All services are ready!"
 echo ""
-echo "📊 Kafka UI: http://localhost:8080"
-echo "📝 Schema Registry: http://localhost:8081"
+echo "Kafka UI: http://localhost:8080"
+echo "Schema Registry: http://localhost:8081"
 echo ""
 echo "Next steps:"
 echo "  1. Build the project: mvn clean install"
